@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", loadGrocery);
-const API_URL = "https://crudcrud.com/api/ee7c73060f6946b2ba5a14bf5bcb2135/groceryData";
+const API_URL = "https://crudcrud.com/api/9771a08a6abe474a91019627485173b3/groceryData";
 function handleSubmitForm(event){
   event.preventDefault();
   const groceryDetails={
@@ -14,10 +14,7 @@ function handleSubmitForm(event){
 })
   .catch((error)=>console.log(error));
 
-  document.getElementById("name").value = "";
-  document.getElementById("descrption").value = "";
-  document.getElementById("price").value = "";
-  document.getElementById("quantity").value = "";
+  event.target.reset();
 }
 function loadGrocery() {
   axios.get(API_URL)
