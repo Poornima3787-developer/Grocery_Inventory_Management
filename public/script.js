@@ -30,9 +30,9 @@ function displayOnScreen(groceryDetails){
   const parentElem=document.getElementById('listofitems');
   const listItem = document.createElement("li");
   listItem.innerHTML = `${groceryDetails.itemName} - ${groceryDetails.description} - ${groceryDetails.price} - <span>${groceryDetails.quantity}</span>
-  <button class="buy1-btn">Buy1</button> 
-  <button class="buy2-btn">Buy2</button> 
-  <button class="buy3-btn">Buy3</button>
+  <button class="btn buy1-btn btn-outline-primary">Buy1</button> 
+  <button class="btn buy2-btn btn-outline-secondary">Buy2</button> 
+  <button class="btn buy3-btn btn-outline-success">Buy3</button>
   `;
   parentElem.appendChild(listItem);
 

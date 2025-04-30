@@ -2,12 +2,11 @@ const express=require('express');
 const sequelize=require('./utils/db-connection');
 const expenseRouter=require('./routes/expenseRouter');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 
 const app=express();
 app.use(cors());
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.use('/expense',expenseRouter);
 
