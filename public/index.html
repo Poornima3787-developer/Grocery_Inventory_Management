@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Inventory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <body class="p-4">
+    
+    <h1>Grocery Inventory Management</h1>
+  
+    <form class="mb-4" onsubmit="handleSubmitForm(event)">
+      <div class="row g-2">
+        <input type="text" id="name" class="form-control" placeholder="Item Name" required>
+        <input type="text" id="description" class="form-control" placeholder="Description" required>
+        <input type="number" id="price" class="form-control" placeholder="Price" required>
+        <input type="number" id="quantity" class="form-control" placeholder="Quantity" required>
+        <button type="submit" class="btn btn-primary">Add Item</button>
+      </div>
+    </form>
+  
+    <h2> Inventory</h2>
+    <ul id="listofitems" class="list-group"></ul>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
